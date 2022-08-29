@@ -6,8 +6,8 @@ export default function Home({ children }) {
   return (
     <>
       <div
-        className={`home d-flex p-relative ${
-          isModalOpen ? "justify-center align-center" : ""
+        className={`home d-flex p-relative justify-center ${
+          isModalOpen ? " align-center" : ""
         }`}
         onClick={() => setIsModalOpen(false)}
       >

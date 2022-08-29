@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState } from "react";
 import Home from "./components/Home";
 import Cards from "./components/common/cards";
@@ -13,7 +12,10 @@ function App() {
   return (
     <AppContext.Provider value={contextValues}>
       <div className="app p-relative d-flex justify-center align-center w-100 h-100">
-        <Home>{!isModalOpen ? <Cards /> : <ThreeDModal />}</Home>
+        <Home>
+          <Cards />
+          <ThreeDModal />
+        </Home>
       </div>
     </AppContext.Provider>
   );
