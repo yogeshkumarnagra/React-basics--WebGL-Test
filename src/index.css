@@ -105,8 +105,8 @@ code {
 
 .starCard {
     background-color: rgb(108, 93, 180);
-    height: 95px;
-    width: 18%;
+    height: 105px;
+    width: 120px;
     margin: 10px;
     box-shadow: black 1px 11px 9px -10px;
 }

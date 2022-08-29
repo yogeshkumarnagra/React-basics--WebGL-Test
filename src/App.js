@@ -5,7 +5,7 @@ import AppContext from "./context/Context";
 import ThreeDModal from "./components/threeDModal";
 
 function App() {
-  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  const cards = Array(5).fill({ value: 0 });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const contextValues = { cards, isModalOpen, setIsModalOpen };
 
