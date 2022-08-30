@@ -6,13 +6,11 @@ import "./cards.css";
 function Cards() {
   const { cards, isModalOpen, randomNumber } = useContext(AppContext);
   useEffect(() => {}, [isModalOpen]);
-  if (isModalOpen) {
-    document.getElementById("cards").classList.add("hidden");
-  }
   return (
     <div
       id="cards"
-      className={`cards d-flex justify-center f-wrap h-fit w-100 `}
+      className={`cards d-flex justify-center f-wrap h-fit w-100
+      ${isModalOpen ? "hidden" : ""} `}
     >
       {cards.length > 0 &&
         cards.map((card, i) => {
