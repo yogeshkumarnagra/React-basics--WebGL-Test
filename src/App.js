@@ -7,7 +7,9 @@ import ThreeDModal from "./components/threeDModal";
 function App() {
   const cards = Array(5).fill({ value: 0 });
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const contextValues = { cards, isModalOpen, setIsModalOpen };
+  const randomNumber = parseInt(Math.random() * 5);
+
+  const contextValues = { cards, isModalOpen, setIsModalOpen, randomNumber };
 
   return (
     <AppContext.Provider value={contextValues}>

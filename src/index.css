@@ -108,13 +108,53 @@ code {
     height: 105px;
     width: 120px;
     margin: 10px;
-    box-shadow: black 1px 11px 9px -10px;
-    transition: width 0.5s ease, height 0.5s ease, transform 0.5s ease-in-out;
+    /* box-shadow: 2px 8px 14px 5px black; */
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease-in-out;
     transition-timing-function: linear;
 }
 
-.starCard:hover {
-    transform: scale(1.2, 1.2);
+.card {
+    background-color: transparent;
+    perspective: 1000px;
+    float: left;
+    margin: 1%;
+    border-radius: 2px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.rotate-card {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    text-align: center;
+}
+
+.card-front,
+.card-back {
+    box-shadow: black 1px 11px 9px -10px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: rgb(108, 93, 180);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    padding-top: 5%;
+    text-align: center;
 }
 
 .starCard img {
@@ -123,7 +163,7 @@ code {
 }
 
 .cards {
-    transition: all 2s ease;
+    transition: visibility 2s ease-in-out;
 }
 
 .threeDModal {
