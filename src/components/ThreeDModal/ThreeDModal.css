@@ -1,0 +1,4 @@
+.threeDModal {
+    width: 80%;
+    transition: height 2s ease-in-out, width 2s ease-in-out, visibility 2s ease-in-out;
+}
