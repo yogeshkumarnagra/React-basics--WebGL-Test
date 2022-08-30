@@ -17,10 +17,7 @@ function Cards() {
         cards.map((card, i) => {
           return (
             <>
-              <StarCard
-                key={`${i}`}
-                randomNumber={{ randomNumber, starKey: i }}
-              />
+              <StarCard key={i} randomNumber={{ randomNumber, starKey: i }} />
             </>
           );
         })}
