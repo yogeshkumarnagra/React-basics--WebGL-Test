@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Home from "./components/Home";
-import Cards from "./components/common/cards";
+import Home from "./components/Home/Home";
+import Cards from "./components/common/card/cards";
 import AppContext from "./context/Context";
-import ThreeDModal from "./components/threeDModal";
+import ThreeDModal from "./components/ThreeDModal/threeDModal";
 
 function App() {
   const cards = Array(5).fill({ value: 0 });
