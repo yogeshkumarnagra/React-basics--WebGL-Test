@@ -11,13 +11,17 @@ function StarCard({ randomNumber }) {
   function cardClickHandler(e) {
     if (randomNumber.starKey === randomNumber.randomNumber) {
       e.stopPropagation();
-      setCurrStarCard(true);
+      // setCurrStarCard(true);
     } else {
       setCurrStarCard(false);
     }
     setIsModalOpen(true);
   }
-  useEffect(() => {}, [isModalOpen]);
+  useEffect(() => {
+    return () => {
+      setCurrStarCard(true);
+    };
+  }, [isModalOpen]);
   return (
     <>
       <div

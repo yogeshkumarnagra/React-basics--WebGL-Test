@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import AppContext from "../../context/Context";
 import "./Home.css";
 
 export default function Home({ children }) {
-  const { setIsModalOpen } = useContext(AppContext);
+  const { setIsModalOpen, isModelOpen } = useContext(AppContext);
   const modalHandler = (e) => {
     e.stopPropagation();
     setIsModalOpen(false);
+    window.reload();
   };
+  useEffect(() => {}, [isModelOpen]);
 
   return (
     <>
